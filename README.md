@@ -1,6 +1,6 @@
 # SteamTV
 
-Launch Steam Big Picture Mode directly from Plex
+Launch [Steam Big Picture Mode](http://store.steampowered.com/bigpicture/) directly from [Plex](http://www.plexapp.com).
 
 ## Installation
 
