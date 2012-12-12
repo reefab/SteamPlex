@@ -1,13 +1,7 @@
 {
-	"Title": "Application TV",
-	"Description": "Launch your applications from Plex - just like in the good old days",
-	"Success": "Success",
-	"Error": "Error",
-	"SettingsUpdated": "Settings updated",
-	"InvalidBasepath": "Provided base path is not a valid directory",
+	"Title": "Steam Big Picture",
+	"Description": "Launch Steam Big Picture Mode",
 	"LaunchSubtitle": "Launch",
 	"LaunchSummary": "Launch ",
-	"PreferencesTitle": "Preferences...",
-	"PreferencesSubtitle": "Edit preferences",
-	"PreferencesSummary": "Lets you specify the search path for the application listing"
+    "WaitMessage": "Please wait while Big Picture Mode is starting..."
 }
