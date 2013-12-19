@@ -1,4 +1,4 @@
-import os
+import os, platform
 
 APPLICATIONS_PREFIX = "/applications/steamtv"
 
@@ -6,6 +6,13 @@ NAME = L('Title')
 ART  = 'art-default.jpg'
 ICON = 'icon-default.png'
 
+system = platform.system
+if system == 'Darwin':
+    command = 'open'
+elif system() == 'Linux':
+    command = 'gvfs-open'
+else
+    command = 'steam'
 
 def Start():
     Plugin.AddPrefixHandler(APPLICATIONS_PREFIX, ApplicationsMainMenu, NAME, ICON, ART)
@@ -17,7 +24,6 @@ def Start():
     MediaContainer.art = R(ART)
     DirectoryItem.thumb = R(ICON)
     VideoItem.thumb = R(ICON)
-
 
 def ApplicationsMainMenu():
     dir = MediaContainer(viewGroup="InfoList")
@@ -39,7 +45,6 @@ def ApplicationsMainMenu():
 
     return dir
 
-
 def LaunchApplication(sender):
-    os.system("open steam://open/bigpicture")
+    os.system("%s steam://open/bigpicture" % command)
     return MessageContainer(NAME, L('WaitMessage'))
