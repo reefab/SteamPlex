@@ -6,12 +6,12 @@ NAME = L('Title')
 ART  = 'art-default.jpg'
 ICON = 'icon-default.png'
 
-system = platform.system
+system = platform.system()
 if system == 'Darwin':
     command = 'open'
-elif system() == 'Linux':
+elif system == 'Linux':
     command = 'gvfs-open'
-else
+else #fallback, not sure if it'll work
     command = 'steam'
 
 def Start():
