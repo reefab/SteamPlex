@@ -10,9 +10,9 @@ system = platform.system()
 if system == 'Darwin':
     command = 'open'
 elif system == 'Linux':
-    command = 'gvfs-open'
-else #fallback, not sure if it'll work
     command = 'steam'
+else: # Not sure what to do on other OS (windows?)
+    command = ''
 
 def Start():
     Plugin.AddPrefixHandler(APPLICATIONS_PREFIX, ApplicationsMainMenu, NAME, ICON, ART)
